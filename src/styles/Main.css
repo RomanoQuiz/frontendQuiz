@@ -1,15 +1,15 @@
 .container ol li{
     font-size: 1.4em;
     color: #cecece;
-}
-
-.start{
+  }
+  
+  .start{
     display: flex;
     justify-content: center;
     padding-top: 2em;
-}
-
-.start .btn{
+  }
+  
+  .start .btn{
     padding: .2em 1.7em;
     border: none;
     border-radius: .1em;
@@ -18,18 +18,122 @@
     text-decoration: none;
     background-color: rgb(222, 30, 30);
     color: white
-}
-
-#form{
+  }
+  
+  #form{
     display: flex;
     justify-content: center;
     margin-top: 4em;
-}
-
-#form .userid{
+  }
+  
+  #form .userid{
     padding: .7em 2em;
     width: 50%;
     border: none;
     border-radius: 3px;
     font-size: 1em;
-}
+  }
+  #mainpageinfo{
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+  }
+  .titleContainer{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    flex-direction: row;
+    width: 100%;
+    height: 20vh;
+    text-align: center;
+  }
+  
+  .romalogo{
+    width: auto;
+    height: 100%;
+    position: absolute;
+    animation: rotRoma;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  #firstPic{
+    left: 0;
+    bottom: 15;
+  }
+  
+  #secondPic{
+    right: 0;
+    top: -20
+  }
+  
+  .title{
+    position: absolute;
+    right: 30%;
+  }
+  
+  @keyframes rotRoma {
+    from{
+      transform: rotate(0deg)
+    }
+    to{
+      transform: rotate(360deg)
+    }
+  }
+  
+  /* Responsive Design */
+
+  @media (max-width: 768px) {
+    .start .btn {
+      font-size: 1em;
+      padding: 0.2em 1.2em;
+    }
+  
+    #form .userid {
+      width: 70%;
+    }
+    
+    .title {
+      right: 20%;
+    } 
+    #mainpageinfo{
+        font-size: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .start {
+      padding-top: 1em;
+    }
+  
+    .titleContainer {
+      height: 15vh;
+    }
+    .romalogo{
+        height: 80%;
+        width: auto;
+    }
+    .title {
+      right: 30%;
+      bottom: 0;
+    }
+    #question-cont{
+        display: flex;
+        flex-direction: row;
+    }
+    #mainpageinfo{
+        font-size: 15px;
+        margin: 0
+
+    }
+    #form {
+      margin-top: 2em;
+    }
+  
+    #form .userid {
+      width: 90%;
+      padding: 0.5em 1em;
+    }
+  }
+  

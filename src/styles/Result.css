@@ -1,0 +1,83 @@
+.flex-center{
+    display: flex;
+    justify-content: center;    
+    flex-direction: column;
+    border: 1px solid #cecece;
+    padding: 3em 4em;
+    gap: 1em;
+  }
+  
+  .container .flex{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .container .flex span {
+    font-size: 1.4em;
+    color: #cecece;
+  }
+  
+  .container .flex span.achive {
+    font-weight: bold;
+    color: #ff2a66;
+    color: #2aff95;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  .table-header {
+    color: #cecece;
+    font-size: 1.1em;
+    text-align: center;
+    background: #212121;
+    padding: 18px 0;
+  }
+  
+  .table-body {
+    font-size: 1.1em;
+    text-align: center;
+    background: #d8d8d8;
+    padding: 18px 0;
+  }
+  
+  .table-header > tr > td{
+    border: 1px solid rgb(222, 30, 30);   
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .flex-center {
+      padding: 2em 2em;
+    }
+  
+    .container .flex span {
+      font-size: 1.2em;
+    }
+  
+    .table-header, .table-body {
+      font-size: 1em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .flex-center {
+      padding: 1.5em 1em;
+    }
+  
+    .container .flex {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .container .flex span {
+      font-size: 1em;
+    }
+  
+    .table-header, .table-body {
+      font-size: 0.9em;
+      padding: 15px 0;
+    }
+  }
+  

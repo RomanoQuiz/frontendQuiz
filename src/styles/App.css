@@ -197,6 +197,7 @@ input[type=radio]:checked ~ .text-primary{
     right: 30%;
     bottom: -20%;
     left: -10%;
+    padding-left: 8rem;
   }
   ul li label {
     font-size: 1em;
@@ -217,16 +218,32 @@ input[type=radio]:checked ~ .text-primary{
 }
 }
 
-@media (min-width: 350px) and (max-width: 450px) {
+@media (min-width: 300px) and (max-width: 450px) {
   .container .title {
     font-size: 2em;
-    padding-left: 2rem;
+    padding-left: 8rem;
   }
-
+  .questions{
+    width: 60%;
+    margin: 0 auto;
+  }
+  #question-cont .text-primary{
+    width: 100%;
+    padding-left: 50px;
+    text-align: center;
+    z-index: 5;
+    float: left;
+    margin-right: 100px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
   .container .questions {
     padding: 1.5em;
   }
-
+  .questions ul{
+    overflow: hidden;
+  }
   ul li label {
     font-size: 1em;
     padding: 15px;
@@ -235,16 +252,17 @@ input[type=radio]:checked ~ .text-primary{
     top: 29%;
   }
   #question-cont{
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    display: inline-block;
+    gap: 0.5rem;
     width: 80%;
     margin: 0 auto;
 }
   .container .btn {
     font-size: 0.9em;
     padding: 0.2em 1em;
+  }
+  .btn .next, .prev{
+    color: black;
   }
 }
 

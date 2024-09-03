@@ -21,13 +21,12 @@ body, html{
   margin: 40px auto;
   height: auto;
   width: 800px;
-  padding: 20px;
 }
 
 .container .title{
+    position: absolute;
     font-size: 3em;
     text-align: center;
-    padding: .3em .2em;
     border-radius: 4px;
 }
 
@@ -166,10 +165,13 @@ input[type=radio]:checked ~ .text-primary{
   .container {
     width: 90%;
     padding: 15px;
+    position: relative;
   }
 
   .container .title {
-    font-size: 2.5em;
+    font-size: 3em;
+    position: absolute;
+    left: 35%;
   }
 }
 
@@ -188,16 +190,17 @@ input[type=radio]:checked ~ .text-primary{
   }
   .titleContainer {
     height: 15vh;
+    position: relative;
   }
   .romalogo{
       height: 60%;
       width: auto;
   }
-  .title {
+  .titleContainer .title {
+    position: absolute;
     right: 30%;
-    bottom: -20%;
-    left: -10%;
-    padding-left: 8rem;
+    font-size: 2rem;
+    text-align: center;
   }
   ul li label {
     font-size: 1em;
@@ -215,21 +218,32 @@ input[type=radio]:checked ~ .text-primary{
     justify-content: center;
     align-items: center;
     width: 300px;
+    text-align: left;
 }
+  .text-primary{
+    padding-left: 20px;
+    margin-left: 15px;
+  }
 }
 
 @media (min-width: 300px) and (max-width: 450px) {
   .container .title {
     font-size: 2em;
-    padding-left: 8rem;
+    padding-left: 1rem;
+  }
+  .titleContainer .title{
+    font-size: 1.5rem;
+    left: 30%;
+    text-align: center;
   }
   .questions{
     width: 60%;
     margin: 0 auto;
   }
   #question-cont .text-primary{
-    width: 100%;
-    padding-left: 50px;
+    width: 300px;
+    padding-left: 60px;
+    margin-left: 16px;
     text-align: center;
     z-index: 5;
     float: left;
@@ -237,6 +251,7 @@ input[type=radio]:checked ~ .text-primary{
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
+    font-size: 12px;
   }
   .container .questions {
     padding: 1.5em;

@@ -4,7 +4,9 @@ import "../styles/Main.css";
 import { useDispatch } from "react-redux";
 import { setUserId } from "../redux/result_reducer";
 import photo from "../helper/bg_f8f8f8-flat_750x_075_f-pad_750x1000_f8f8f8.u5-removebg-preview.png";
-function Main() {
+
+function Main({id}) {
+
   const inputRef = useRef(null);
   const dispatch = useDispatch();
 
@@ -22,8 +24,8 @@ function Main() {
         <img src={photo} id="secondPic" className="romalogo" alt="roma logo" />
       </div>
       <p id="mainpageinfo">
-        Bine ați venit la test! Testul are 10 întrebări. Fiecare întrebare are
-        trei opțiuni. Puteți alege doar o opțiune. Puteți examina și modifica
+        Bine ați venit la test! Testul are 8 întrebări. Fiecare întrebare are
+        4 opțiuni. Puteți alege doar o opțiune. Puteți examina și modifica
         răspunsurile înainte de încheierea testului. Rezultatul va fi
         declarat la sfârșitul testului.
       </p>
@@ -36,7 +38,7 @@ function Main() {
         />
       </form>
       <div className="start">
-        <Link className="btn" to={inputRef ? "quiz" : "/"} onClick={startQuiz}>
+        <Link className="btn" to={inputRef ? `/quiz/${id}` : "/"} onClick={startQuiz}>
           Start
         </Link>
       </div>

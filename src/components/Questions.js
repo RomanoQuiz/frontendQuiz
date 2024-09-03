@@ -5,15 +5,15 @@ import { useFetchQuestion } from '../hooks/FetchQuestion'
 import { updateResult } from '../hooks/setResult'
 
 
-export default function Questions({ onChecked }) {
+export default function Questions({ onChecked, quizId }) {
 
     const [checked, setChecked] = useState(undefined)
     const { trace } = useSelector(state => state.questions);
     const result = useSelector(state => state.result.result);
-    const [{ isLoading, serverError}] = useFetchQuestion() 
+    const [{ isLoading, serverError}] = useFetchQuestion(quizId)
     const questions = useSelector(state => state.questions.queue[state.questions.trace])
     const dispatch = useDispatch()
-
+    
     useEffect(() => {
         dispatch(updateResult({ trace, checked}))
     }, [checked, dispatch, trace])

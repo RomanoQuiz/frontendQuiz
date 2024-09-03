@@ -19,13 +19,31 @@
     background-color: rgb(222, 30, 30);
     color: white
   }
-  
+  #homepage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column ;
+    gap: 5rem;
+  }
   #form{
     display: flex;
     justify-content: center;
     margin-top: 4em;
   }
-  
+  #btnGroupMain{
+    margin: 0 auto;
+    display: inline-flex;
+    gap: 1rem;
+    }
+  #btnGroupMain .btn{
+    width: 100%;
+    height: auto;
+  }
+  #btnGroupMain .btn:hover{
+    color: white;
+    background-color: var(--primary-color);
+  }
   #form .userid{
     padding: .7em 2em;
     width: 50%;
@@ -47,7 +65,9 @@
     height: 20vh;
     text-align: center;
   }
-  
+  .subtitle{
+    text-align: center;
+  }
   .romalogo{
     width: auto;
     height: 100%;
@@ -70,7 +90,7 @@
   
   .title{
     position: absolute;
-    right: 30%;
+    right: 35%;
   }
   
   @keyframes rotRoma {

@@ -4,7 +4,7 @@ import { getServerData } from "../helper/helper";
 
 import * as Action from '../redux/question_reducer'
 
-export const useFetchQuestion = () => {
+export const useFetchQuestion = (id) => {
     const dispatch = useDispatch();   
     const [getData, setGetData] = useState({ isLoading : false, apiData : [], serverError: null});
 
@@ -13,7 +13,8 @@ export const useFetchQuestion = () => {
 
         (async () => {
             try {
-                const data = await getServerData(`${process.env.REACT_APP_SERVER_HOSTNAME}/api/question`, (data) => data)
+                const data = await getServerData(`${process.env.REACT_APP_SERVER_HOSTNAME}/api/question?id=${id}`, (data) => data)
+
                 const {questions, answers} = data[0]
                 if(questions.length > 0){
                     setGetData(prev => ({...prev, isLoading : false}));
@@ -27,7 +28,7 @@ export const useFetchQuestion = () => {
                 setGetData(prev => ({...prev, serverError : error}));
             }
         })();
-    }, [dispatch]);
+    }, [dispatch, id]);
 
     return [getData, setGetData];
 }

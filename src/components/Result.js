@@ -18,15 +18,13 @@ function Result() {
   const { queue, answers } = useSelector((state) => state.questions);
   const { result, userId } = useSelector((state) => state.result);
 
-  const totalPoints = queue.length * 10;
-  const attempts = attemps_Number(result);
+  const totalPoints = queue.length * 12.5;
   const earnPoints = earnPoints_Number(result, answers);
   const flag = flagResult(totalPoints, earnPoints);
 
   usePublishResult({
     result,
     username: userId,
-    attempts,
     points: earnPoints,
     achived: flag ? "Promovat" : "Nepromovat",
   });
@@ -55,10 +53,6 @@ function Result() {
         <div className="flex">
           <span>Total intrebari:</span>
           <span className="bold">{queue.length || 0}</span>
-        </div>
-        <div className="flex">
-          <span>Total incercari:</span>
-          <span className="bold">{attempts || 0}</span>
         </div>
         <div className="flex">
           <span>Punctajul total obtinut:</span>

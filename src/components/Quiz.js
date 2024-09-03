@@ -3,18 +3,17 @@ import Questions from "./Questions";
 import { useDispatch, useSelector } from "react-redux";
 import { MoveNextQuestion, MovePrevQuestion } from "../hooks/FetchQuestion";
 import { PushAnswer } from "../hooks/setResult";
-import { Navigate } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import photo from "../helper/bg_f8f8f8-flat_750x_075_f-pad_750x1000_f8f8f8.u5-removebg-preview.png";
 
 function Quiz() {
   const result = useSelector((state) => state.result.result);
   const [check, setChecked] = useState(undefined);
   const { trace, queue } = useSelector((state) => state.questions);
-
+  const {id} = useParams();
   const dispatch = useDispatch();
-
-  useEffect(() => {}, []);
-
+  
+  
   function onNext() {
     if (trace < queue.length) {
       dispatch(MoveNextQuestion());
@@ -46,7 +45,7 @@ function Quiz() {
         <img src={photo} id="secondPic" className="romalogo" alt="roma logo"/>
       </div>
 
-      <Questions onChecked={onChecked} />
+      <Questions onChecked={onChecked} quizId={id}/>
 
       <div className="grid">
         {trace > 0 ? (

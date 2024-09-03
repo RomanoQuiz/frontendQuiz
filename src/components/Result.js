@@ -6,7 +6,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { resetAllAction } from "../redux/question_reducer";
 import { resetResultAction } from "../redux/result_reducer";
 import {
-  attemps_Number,
   earnPoints_Number,
   flagResult,
 } from "../helper/helper";

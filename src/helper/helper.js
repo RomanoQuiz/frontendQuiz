@@ -7,7 +7,7 @@ export function attemps_Number(result) {
 }
 
 export function earnPoints_Number(result, answers, point) {
-    return result.map((element, i) => answers[i] === element).filter(i => i).map(i => 10).reduce((prev, curr) => prev + curr, 0)
+    return result.map((element, i) => answers[i] === element).filter(i => i).map(i => 12.5).reduce((prev, curr) => prev + curr, 0)
 }
 
 export function flagResult(totalPoints, earnPoints) {

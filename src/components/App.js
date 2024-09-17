@@ -13,11 +13,11 @@ const router = createBrowserRouter([
   },
   {
     path: '/quiz-general' ,
-    element: <Main id="669556961d6deb3f90159c1a"/> 
+    element: <Main id="66e96bf5dbf14b2d7e5908bb"/> 
   },
   {
     path: '/quiz-personalitati',
-    element: <Main id="66c61cc88605c11713fa8d9d"/>
+    element: <Main id="66e692ae752884cf14f77c79"/>
   },
   {
     path: '/quiz/:id',

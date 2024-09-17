@@ -14,10 +14,10 @@ function HomePage() {
       </div>{" "}
       <div id="btnGroupMain">
         <Link to="/quiz-general">
-          <button className="btn">Intrebari generale</button>
+          <button className="btn">Întrebări generale</button>
         </Link>
         <Link to="/quiz-personalitati">
-          <button className="btn">Personalitati Rome</button>
+          <button className="btn">Personalități Rome</button>
         </Link>
       </div>
     </div>
